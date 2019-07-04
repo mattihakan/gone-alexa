@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "gonesearch",
+            "invocationName": "gone",
             "intents": [
                 {
                     "name": "AMAZON.FallbackIntent",

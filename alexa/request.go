@@ -1,13 +1,13 @@
 package alexa
 
-// Constants
+// built-in intents constants
 const (
 	HelpIntent   = "AMAZON.HelpIntent"
 	CancelIntent = "AMAZON.CancelIntent"
 	StopIntent   = "AMAZON.StopIntent"
 )
 
-// Request struct
+// Request - the incoming Alexa skill request
 type Request struct {
 	Version string  `json:"version"`
 	Session Session `json:"session"`
@@ -15,7 +15,7 @@ type Request struct {
 	Context Context `json:"context"`
 }
 
-// Session struct
+// Session - the incoming Alexa skill request session
 type Session struct {
 	New         bool   `json:"new"`
 	SessionID   string `json:"sessionId"`
@@ -29,7 +29,7 @@ type Session struct {
 	} `json:"user"`
 }
 
-// Context struct
+// Context - the incoming Alexa skill request context
 type Context struct {
 	System struct {
 		APIAccessToken string `json:"apiAccessToken"`
@@ -42,7 +42,7 @@ type Context struct {
 	} `json:"System,omitempty"`
 }
 
-// ReqBody struct
+// ReqBody - the incoming Alexa skill request request body
 type ReqBody struct {
 	Type        string `json:"type"`
 	RequestID   string `json:"requestId"`
@@ -53,20 +53,20 @@ type ReqBody struct {
 	DialogState string `json:"dialogState,omitempty"`
 }
 
-// Intent struct
+// Intent - the incoming Alexa skill request intent
 type Intent struct {
 	Name  string          `json:"name"`
 	Slots map[string]Slot `json:"slots"`
 }
 
-// Slot struct
+// Slot - the incoming Alexa skill request slot
 type Slot struct {
 	Name        string      `json:"name"`
 	Value       string      `json:"value"`
 	Resolutions Resolutions `json:"resolutions"`
 }
 
-// Resolutions struct
+// Resolutions - the incoming Alexa skill request slot resolutions
 type Resolutions struct {
 	ResolutionPerAuthority []struct {
 		Values []struct {
