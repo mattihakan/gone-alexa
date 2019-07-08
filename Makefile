@@ -28,3 +28,6 @@ build-linux:
 
 package:
 	zip handler.zip -j $(BINARY_NAME)
+
+package-linux:
+	zip handler.zip -j $(BINARY_UNIX)
