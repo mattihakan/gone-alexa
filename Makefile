@@ -25,3 +25,6 @@ deps:
 
 build-linux:
 	GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_UNIX) -v
+
+package:
+	zip handler.zip -j $(BINARY_NAME)
