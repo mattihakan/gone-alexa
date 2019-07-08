@@ -8,4 +8,4 @@ phases:
     commands:
       - make deps
       - make build-linux
-      - make package
+      - make package-linux
